@@ -46,5 +46,10 @@ namespace ClientHotel
         {
 
         }
+
+        private void BUT_Ok_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,25 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inscription.cs">
+    <Compile Include="HotelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inscription.Designer.cs">
-      <DependentUpon>Inscription.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hotels.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hotels.Designer.cs">
-      <DependentUpon>Hotels.cs</DependentUpon>
+    <Compile Include="HotelForm.Designer.cs">
+      <DependentUpon>HotelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Inscription.resx">
-      <DependentUpon>Inscription.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hotels.resx">
-      <DependentUpon>Hotels.cs</DependentUpon>
+    <EmbeddedResource Include="HotelForm.resx">
+      <DependentUpon>HotelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
