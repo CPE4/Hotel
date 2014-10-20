@@ -43,18 +43,21 @@
             this.txtEtat = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTel = new System.Windows.Forms.Label();
             this.txtPseudo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblPseudo = new System.Windows.Forms.Label();
             this.txtMdp = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.txtLatitude = new System.Windows.Forms.TextBox();
+            this.lblLatitude = new System.Windows.Forms.Label();
+            this.txtLongitude = new System.Windows.Forms.TextBox();
+            this.lblLongitude = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblPays = new System.Windows.Forms.Label();
+            this.listPays = new System.Windows.Forms.ComboBox();
+            this.listInd = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -157,7 +160,7 @@
             // 
             this.txtEtat.Location = new System.Drawing.Point(61, 363);
             this.txtEtat.Name = "txtEtat";
-            this.txtEtat.Size = new System.Drawing.Size(379, 22);
+            this.txtEtat.Size = new System.Drawing.Size(166, 22);
             this.txtEtat.TabIndex = 13;
             // 
             // label7
@@ -171,19 +174,20 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(104, 447);
+            this.txtTel.Location = new System.Drawing.Point(179, 447);
+            this.txtTel.MaxLength = 9;
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(336, 22);
+            this.txtTel.Size = new System.Drawing.Size(261, 22);
             this.txtTel.TabIndex = 15;
             // 
-            // label8
+            // lblTel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 450);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 17);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Téléphone";
+            this.lblTel.AutoSize = true;
+            this.lblTel.Location = new System.Drawing.Point(22, 450);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(76, 17);
+            this.lblTel.TabIndex = 14;
+            this.lblTel.Text = "Téléphone";
             // 
             // txtPseudo
             // 
@@ -192,14 +196,14 @@
             this.txtPseudo.Size = new System.Drawing.Size(142, 22);
             this.txtPseudo.TabIndex = 17;
             // 
-            // label10
+            // lblPseudo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 59);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Pseudo";
+            this.lblPseudo.AutoSize = true;
+            this.lblPseudo.Location = new System.Drawing.Point(22, 59);
+            this.lblPseudo.Name = "lblPseudo";
+            this.lblPseudo.Size = new System.Drawing.Size(56, 17);
+            this.lblPseudo.TabIndex = 16;
+            this.lblPseudo.Text = "Pseudo";
             // 
             // txtMdp
             // 
@@ -233,37 +237,37 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Mail";
             // 
-            // textBox2
+            // txtLatitude
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 404);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 22);
-            this.textBox2.TabIndex = 25;
+            this.txtLatitude.Location = new System.Drawing.Point(85, 404);
+            this.txtLatitude.Name = "txtLatitude";
+            this.txtLatitude.Size = new System.Drawing.Size(110, 22);
+            this.txtLatitude.TabIndex = 25;
             // 
-            // label13
+            // lblLatitude
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(22, 407);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 17);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Latitude";
+            this.lblLatitude.AutoSize = true;
+            this.lblLatitude.Location = new System.Drawing.Point(22, 407);
+            this.lblLatitude.Name = "lblLatitude";
+            this.lblLatitude.Size = new System.Drawing.Size(59, 17);
+            this.lblLatitude.TabIndex = 24;
+            this.lblLatitude.Text = "Latitude";
             // 
-            // textBox1
+            // txtLongitude
             // 
-            this.textBox1.Location = new System.Drawing.Point(330, 407);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 22);
-            this.textBox1.TabIndex = 27;
+            this.txtLongitude.Location = new System.Drawing.Point(330, 407);
+            this.txtLongitude.Name = "txtLongitude";
+            this.txtLongitude.Size = new System.Drawing.Size(110, 22);
+            this.txtLongitude.TabIndex = 27;
             // 
-            // label12
+            // lblLongitude
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(252, 410);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 17);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Longitude";
+            this.lblLongitude.AutoSize = true;
+            this.lblLongitude.Location = new System.Drawing.Point(252, 410);
+            this.lblLongitude.Name = "lblLongitude";
+            this.lblLongitude.Size = new System.Drawing.Size(71, 17);
+            this.lblLongitude.TabIndex = 26;
+            this.lblLongitude.Text = "Longitude";
             // 
             // button1
             // 
@@ -274,24 +278,52 @@
             this.button1.Text = "Inscription";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // lblPays
+            // 
+            this.lblPays.AutoSize = true;
+            this.lblPays.Location = new System.Drawing.Point(235, 366);
+            this.lblPays.Name = "lblPays";
+            this.lblPays.Size = new System.Drawing.Size(39, 17);
+            this.lblPays.TabIndex = 29;
+            this.lblPays.Text = "Pays";
+            // 
+            // listPays
+            // 
+            this.listPays.FormattingEnabled = true;
+            this.listPays.Location = new System.Drawing.Point(281, 363);
+            this.listPays.Name = "listPays";
+            this.listPays.Size = new System.Drawing.Size(159, 24);
+            this.listPays.TabIndex = 30;
+            // 
+            // listInd
+            // 
+            this.listInd.FormattingEnabled = true;
+            this.listInd.Location = new System.Drawing.Point(104, 447);
+            this.listInd.Name = "listInd";
+            this.listInd.Size = new System.Drawing.Size(69, 24);
+            this.listInd.TabIndex = 31;
+            // 
             // Inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 541);
+            this.Controls.Add(this.listInd);
+            this.Controls.Add(this.listPays);
+            this.Controls.Add(this.lblPays);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtLongitude);
+            this.Controls.Add(this.lblLongitude);
+            this.Controls.Add(this.txtLatitude);
+            this.Controls.Add(this.lblLatitude);
             this.Controls.Add(this.txtMail);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPseudo);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblPseudo);
             this.Controls.Add(this.txtTel);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblTel);
             this.Controls.Add(this.txtEtat);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtVille);
@@ -308,6 +340,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Inscription";
             this.Text = "Inscription";
+            this.Load += new System.EventHandler(this.Inscription_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,17 +363,20 @@
         private System.Windows.Forms.TextBox txtEtat;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.TextBox txtPseudo;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblPseudo;
         private System.Windows.Forms.TextBox txtMdp;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtLatitude;
+        private System.Windows.Forms.Label lblLatitude;
+        private System.Windows.Forms.TextBox txtLongitude;
+        private System.Windows.Forms.Label lblLongitude;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblPays;
+        private System.Windows.Forms.ComboBox listPays;
+        private System.Windows.Forms.ComboBox listInd;
     }
 }

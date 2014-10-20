@@ -19,7 +19,7 @@ namespace ClientHotel
 
         private void Hotels_Load(object sender, EventArgs e)
         {
-            Inscription inscription = new Inscription();
+            Inscription inscription = new Inscription("Hotelier");
             inscription.ShowDialog();
         }
     }
