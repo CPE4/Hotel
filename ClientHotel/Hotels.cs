@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace ClientHotel
 {
-    public partial class Form1 : Form
+    public partial class Hotels : Form
     {
-        public Form1()
+        public Hotels()
         {
             InitializeComponent();
+        }
+
+        private void Hotels_Load(object sender, EventArgs e)
+        {
+            Inscription inscription = new Inscription();
+            inscription.ShowDialog();
         }
     }
 }

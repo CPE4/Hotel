@@ -1,6 +1,6 @@
 ﻿namespace ClientHotel
 {
-    partial class Form1
+    partial class Hotels
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Hotels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 426);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(950, 731);
+            this.Name = "Hotels";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Hotels_Load);
             this.ResumeLayout(false);
 
         }
