@@ -54,10 +54,12 @@
             this.lblLatitude = new System.Windows.Forms.Label();
             this.txtLongitude = new System.Windows.Forms.TextBox();
             this.lblLongitude = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAjouter = new System.Windows.Forms.Button();
             this.lblPays = new System.Windows.Forms.Label();
             this.listPays = new System.Windows.Forms.ComboBox();
             this.listInd = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -174,7 +176,7 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(179, 447);
+            this.txtTel.Location = new System.Drawing.Point(179, 432);
             this.txtTel.MaxLength = 9;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(261, 22);
@@ -183,7 +185,7 @@
             // lblTel
             // 
             this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(22, 450);
+            this.lblTel.Location = new System.Drawing.Point(22, 435);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(76, 17);
             this.lblTel.TabIndex = 14;
@@ -239,7 +241,7 @@
             // 
             // txtLatitude
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(85, 404);
+            this.txtLatitude.Location = new System.Drawing.Point(85, 395);
             this.txtLatitude.Name = "txtLatitude";
             this.txtLatitude.Size = new System.Drawing.Size(110, 22);
             this.txtLatitude.TabIndex = 25;
@@ -247,7 +249,7 @@
             // lblLatitude
             // 
             this.lblLatitude.AutoSize = true;
-            this.lblLatitude.Location = new System.Drawing.Point(22, 407);
+            this.lblLatitude.Location = new System.Drawing.Point(22, 398);
             this.lblLatitude.Name = "lblLatitude";
             this.lblLatitude.Size = new System.Drawing.Size(59, 17);
             this.lblLatitude.TabIndex = 24;
@@ -255,7 +257,7 @@
             // 
             // txtLongitude
             // 
-            this.txtLongitude.Location = new System.Drawing.Point(330, 407);
+            this.txtLongitude.Location = new System.Drawing.Point(330, 398);
             this.txtLongitude.Name = "txtLongitude";
             this.txtLongitude.Size = new System.Drawing.Size(110, 22);
             this.txtLongitude.TabIndex = 27;
@@ -263,20 +265,21 @@
             // lblLongitude
             // 
             this.lblLongitude.AutoSize = true;
-            this.lblLongitude.Location = new System.Drawing.Point(252, 410);
+            this.lblLongitude.Location = new System.Drawing.Point(252, 401);
             this.lblLongitude.Name = "lblLongitude";
             this.lblLongitude.Size = new System.Drawing.Size(71, 17);
             this.lblLongitude.TabIndex = 26;
             this.lblLongitude.Text = "Longitude";
             // 
-            // button1
+            // btnAjouter
             // 
-            this.button1.Location = new System.Drawing.Point(68, 491);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 38);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Inscription";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAjouter.Location = new System.Drawing.Point(68, 491);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(312, 38);
+            this.btnAjouter.TabIndex = 28;
+            this.btnAjouter.Text = "Inscription";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // lblPays
             // 
@@ -298,20 +301,38 @@
             // listInd
             // 
             this.listInd.FormattingEnabled = true;
-            this.listInd.Location = new System.Drawing.Point(104, 447);
+            this.listInd.Location = new System.Drawing.Point(104, 432);
             this.listInd.Name = "listInd";
             this.listInd.Size = new System.Drawing.Size(69, 24);
             this.listInd.TabIndex = 31;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(104, 463);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(110, 22);
+            this.textBox1.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 465);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 17);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Aeroport";
             // 
             // Inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 541);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.listInd);
             this.Controls.Add(this.listPays);
             this.Controls.Add(this.lblPays);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.txtLongitude);
             this.Controls.Add(this.lblLongitude);
             this.Controls.Add(this.txtLatitude);
@@ -374,9 +395,11 @@
         private System.Windows.Forms.Label lblLatitude;
         private System.Windows.Forms.TextBox txtLongitude;
         private System.Windows.Forms.Label lblLongitude;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Label lblPays;
         private System.Windows.Forms.ComboBox listPays;
         private System.Windows.Forms.ComboBox listInd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
     }
 }
