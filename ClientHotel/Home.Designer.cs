@@ -1,6 +1,6 @@
 ﻿namespace ClientHotel
 {
-    partial class Hotels
+    partial class Home
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

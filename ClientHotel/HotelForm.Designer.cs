@@ -49,21 +49,21 @@
             this.HOT_LongitudeLab = new System.Windows.Forms.Label();
             this.HOT_Longitude = new System.Windows.Forms.TextBox();
             this.HOT_TelephoneLab = new System.Windows.Forms.Label();
-            this.HOT_Telephone = new System.Windows.Forms.TextBox();
+            this.HOT_Tel = new System.Windows.Forms.TextBox();
             this.HOT_NbEtoilesLab = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.HOT_NbEtoiles = new System.Windows.Forms.ComboBox();
+            this.CAT_NbEtoiles = new System.Windows.Forms.ComboBox();
             this.HOT_Prix = new System.Windows.Forms.ComboBox();
-            this.HOT_Indicatif = new System.Windows.Forms.ComboBox();
             this.HOT_Pays = new System.Windows.Forms.ComboBox();
             this.HOT_MelLab = new System.Windows.Forms.Label();
             this.HOT_Mel = new System.Windows.Forms.TextBox();
             this.Hot_SiteWebLab = new System.Windows.Forms.Label();
-            this.Hot_SiteWeb = new System.Windows.Forms.TextBox();
+            this.HOT_SiteWeb = new System.Windows.Forms.TextBox();
             this.HOT_NbChambresLab = new System.Windows.Forms.Label();
             this.HOT_NbChambres = new System.Windows.Forms.TextBox();
             this.BUT_Annuler = new System.Windows.Forms.Button();
             this.BUT_Ok = new System.Windows.Forms.Button();
+            this.IND_Indicatif = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // HOT_Nom
@@ -72,7 +72,6 @@
             this.HOT_Nom.Name = "HOT_Nom";
             this.HOT_Nom.Size = new System.Drawing.Size(223, 20);
             this.HOT_Nom.TabIndex = 0;
-            this.HOT_Nom.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // HOT_NomLab
             // 
@@ -82,7 +81,6 @@
             this.HOT_NomLab.Size = new System.Drawing.Size(29, 13);
             this.HOT_NomLab.TabIndex = 1;
             this.HOT_NomLab.Text = "Nom";
-            this.HOT_NomLab.Click += new System.EventHandler(this.label1_Click);
             // 
             // HOT_DescriptionLab
             // 
@@ -110,7 +108,6 @@
             this.HOT_PrixLab.Size = new System.Drawing.Size(24, 13);
             this.HOT_PrixLab.TabIndex = 5;
             this.HOT_PrixLab.Text = "Prix";
-            this.HOT_PrixLab.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // HOT_AdrLigne1Lab
             // 
@@ -226,7 +223,6 @@
             this.HOT_LongitudeLab.Size = new System.Drawing.Size(54, 13);
             this.HOT_LongitudeLab.TabIndex = 22;
             this.HOT_LongitudeLab.Text = "Longitude";
-            this.HOT_LongitudeLab.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // HOT_Longitude
             // 
@@ -234,7 +230,6 @@
             this.HOT_Longitude.Name = "HOT_Longitude";
             this.HOT_Longitude.Size = new System.Drawing.Size(198, 20);
             this.HOT_Longitude.TabIndex = 21;
-            this.HOT_Longitude.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // HOT_TelephoneLab
             // 
@@ -245,13 +240,13 @@
             this.HOT_TelephoneLab.TabIndex = 24;
             this.HOT_TelephoneLab.Text = "Telephone";
             // 
-            // HOT_Telephone
+            // HOT_Tel
             // 
-            this.HOT_Telephone.Location = new System.Drawing.Point(170, 288);
-            this.HOT_Telephone.MaxLength = 9;
-            this.HOT_Telephone.Name = "HOT_Telephone";
-            this.HOT_Telephone.Size = new System.Drawing.Size(178, 20);
-            this.HOT_Telephone.TabIndex = 23;
+            this.HOT_Tel.Location = new System.Drawing.Point(170, 288);
+            this.HOT_Tel.MaxLength = 9;
+            this.HOT_Tel.Name = "HOT_Tel";
+            this.HOT_Tel.Size = new System.Drawing.Size(178, 20);
+            this.HOT_Tel.TabIndex = 23;
             // 
             // HOT_NbEtoilesLab
             // 
@@ -270,13 +265,19 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 28;
             // 
-            // HOT_NbEtoiles
+            // CAT_NbEtoiles
             // 
-            this.HOT_NbEtoiles.FormattingEnabled = true;
-            this.HOT_NbEtoiles.Location = new System.Drawing.Point(498, 289);
-            this.HOT_NbEtoiles.Name = "HOT_NbEtoiles";
-            this.HOT_NbEtoiles.Size = new System.Drawing.Size(139, 21);
-            this.HOT_NbEtoiles.TabIndex = 29;
+            this.CAT_NbEtoiles.FormattingEnabled = true;
+            this.CAT_NbEtoiles.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.CAT_NbEtoiles.Location = new System.Drawing.Point(498, 289);
+            this.CAT_NbEtoiles.Name = "CAT_NbEtoiles";
+            this.CAT_NbEtoiles.Size = new System.Drawing.Size(139, 21);
+            this.CAT_NbEtoiles.TabIndex = 5;
             // 
             // HOT_Prix
             // 
@@ -285,14 +286,6 @@
             this.HOT_Prix.Name = "HOT_Prix";
             this.HOT_Prix.Size = new System.Drawing.Size(139, 21);
             this.HOT_Prix.TabIndex = 30;
-            // 
-            // HOT_Indicatif
-            // 
-            this.HOT_Indicatif.FormattingEnabled = true;
-            this.HOT_Indicatif.Location = new System.Drawing.Point(111, 288);
-            this.HOT_Indicatif.Name = "HOT_Indicatif";
-            this.HOT_Indicatif.Size = new System.Drawing.Size(53, 21);
-            this.HOT_Indicatif.TabIndex = 31;
             // 
             // HOT_Pays
             // 
@@ -327,12 +320,12 @@
             this.Hot_SiteWebLab.TabIndex = 36;
             this.Hot_SiteWebLab.Text = "Site web";
             // 
-            // Hot_SiteWeb
+            // HOT_SiteWeb
             // 
-            this.Hot_SiteWeb.Location = new System.Drawing.Point(111, 340);
-            this.Hot_SiteWeb.Name = "Hot_SiteWeb";
-            this.Hot_SiteWeb.Size = new System.Drawing.Size(237, 20);
-            this.Hot_SiteWeb.TabIndex = 35;
+            this.HOT_SiteWeb.Location = new System.Drawing.Point(111, 340);
+            this.HOT_SiteWeb.Name = "HOT_SiteWeb";
+            this.HOT_SiteWeb.Size = new System.Drawing.Size(237, 20);
+            this.HOT_SiteWeb.TabIndex = 35;
             // 
             // HOT_NbChambresLab
             // 
@@ -369,27 +362,35 @@
             this.BUT_Ok.UseVisualStyleBackColor = true;
             this.BUT_Ok.Click += new System.EventHandler(this.BUT_Ok_Click);
             // 
+            // IND_Indicatif
+            // 
+            this.IND_Indicatif.Location = new System.Drawing.Point(111, 288);
+            this.IND_Indicatif.MaxLength = 9;
+            this.IND_Indicatif.Name = "IND_Indicatif";
+            this.IND_Indicatif.Size = new System.Drawing.Size(53, 20);
+            this.IND_Indicatif.TabIndex = 41;
+            // 
             // HotelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 416);
+            this.Controls.Add(this.IND_Indicatif);
             this.Controls.Add(this.BUT_Ok);
             this.Controls.Add(this.BUT_Annuler);
             this.Controls.Add(this.HOT_NbChambresLab);
             this.Controls.Add(this.HOT_NbChambres);
             this.Controls.Add(this.Hot_SiteWebLab);
-            this.Controls.Add(this.Hot_SiteWeb);
+            this.Controls.Add(this.HOT_SiteWeb);
             this.Controls.Add(this.HOT_MelLab);
             this.Controls.Add(this.HOT_Mel);
             this.Controls.Add(this.HOT_Pays);
-            this.Controls.Add(this.HOT_Indicatif);
             this.Controls.Add(this.HOT_Prix);
-            this.Controls.Add(this.HOT_NbEtoiles);
+            this.Controls.Add(this.CAT_NbEtoiles);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.HOT_NbEtoilesLab);
             this.Controls.Add(this.HOT_TelephoneLab);
-            this.Controls.Add(this.HOT_Telephone);
+            this.Controls.Add(this.HOT_Tel);
             this.Controls.Add(this.HOT_LongitudeLab);
             this.Controls.Add(this.HOT_Longitude);
             this.Controls.Add(this.HOT_LatitudeLab);
@@ -412,7 +413,6 @@
             this.Controls.Add(this.HOT_Nom);
             this.Name = "HotelForm";
             this.Text = "HotelForm";
-            this.Load += new System.EventHandler(this.HotelForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,20 +441,20 @@
         private System.Windows.Forms.Label HOT_LongitudeLab;
         private System.Windows.Forms.TextBox HOT_Longitude;
         private System.Windows.Forms.Label HOT_TelephoneLab;
-        private System.Windows.Forms.TextBox HOT_Telephone;
+        private System.Windows.Forms.TextBox HOT_Tel;
         private System.Windows.Forms.Label HOT_NbEtoilesLab;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox HOT_NbEtoiles;
+        private System.Windows.Forms.ComboBox CAT_NbEtoiles;
         private System.Windows.Forms.ComboBox HOT_Prix;
-        private System.Windows.Forms.ComboBox HOT_Indicatif;
         private System.Windows.Forms.ComboBox HOT_Pays;
         private System.Windows.Forms.Label HOT_MelLab;
         private System.Windows.Forms.TextBox HOT_Mel;
         private System.Windows.Forms.Label Hot_SiteWebLab;
-        private System.Windows.Forms.TextBox Hot_SiteWeb;
+        private System.Windows.Forms.TextBox HOT_SiteWeb;
         private System.Windows.Forms.Label HOT_NbChambresLab;
         private System.Windows.Forms.TextBox HOT_NbChambres;
         private System.Windows.Forms.Button BUT_Annuler;
         private System.Windows.Forms.Button BUT_Ok;
+        private System.Windows.Forms.TextBox IND_Indicatif;
     }
 }
