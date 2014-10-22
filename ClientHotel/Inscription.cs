@@ -79,6 +79,7 @@ namespace ClientHotel
                 lblPays.Visible = false;
                 listPays.Visible = false;
                 TypeUtilsateurP = TypeUtilisateur.Hotelier;
+                FabriqueUtilisateurP = new FabriqueUtilisateur();
                 UtilisateurP = FabriqueUtilisateurP.creation(TypeUtilisateur.Hotelier);
         }
 
@@ -96,6 +97,7 @@ namespace ClientHotel
             lblPays.Visible = true;
             listPays.Visible = true;
             TypeUtilsateurP = TypeUtilisateur.Abonne;
+            FabriqueUtilisateurP = new FabriqueUtilisateur();
             UtilisateurP = FabriqueUtilisateurP.creation(TypeUtilisateur.Abonne);
         }
 
@@ -129,26 +131,11 @@ namespace ClientHotel
 
             String json = JsonConvert.SerializeObject(UtilisateurP);
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost:1194/api/Restaurant");
-            request.Accept = "application/json";
-            request.ContentType = "text/json";
-            request.Method = "POST";
-            request.MaximumAutomaticRedirections = 4;
-            request.MaximumResponseHeadersLength = 4;
-            StreamWriter StreamWriter = new StreamWriter(request.GetRequestStream());
-            StreamWriter.Write(json);
-            StreamWriter.Flush();
-            StreamWriter.Close();
-            request.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            Stream receiveStream = response.GetResponseStream();
-
-            response.Close();
+            Utils.sendDataToApi("http://localhost:1597/api/"+UtilisateurP.Path, json, "-1");
         }
 
         /// <summary>
-        /// convertit la chaine en float, si la chane possède un . il sera remplacé par une ,
+        /// convertit la chaine en float, si la chaine possède un . il sera remplacé par une ,
         /// </summary>
         /// <param name="str">un chaine de caractère</param>
         /// <returns>un float</returns>
@@ -157,6 +144,11 @@ namespace ClientHotel
             if (str.Contains("."))
                 str = str.Replace(".", ",");
             return System.Convert.ToSingle(str);
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         } 
     }
 }

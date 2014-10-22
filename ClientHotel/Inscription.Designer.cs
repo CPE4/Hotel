@@ -60,6 +60,7 @@
             this.listInd = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnAnnuler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -273,9 +274,9 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(68, 491);
+            this.btnAjouter.Location = new System.Drawing.Point(12, 491);
             this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(312, 38);
+            this.btnAjouter.Size = new System.Drawing.Size(206, 38);
             this.btnAjouter.TabIndex = 28;
             this.btnAjouter.Text = "Inscription";
             this.btnAjouter.UseVisualStyleBackColor = true;
@@ -322,11 +323,22 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "Aeroport";
             // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.Location = new System.Drawing.Point(264, 491);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(206, 38);
+            this.btnAnnuler.TabIndex = 34;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
             // Inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 541);
+            this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.listInd);
@@ -401,5 +413,6 @@
         private System.Windows.Forms.ComboBox listInd;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAnnuler;
     }
 }

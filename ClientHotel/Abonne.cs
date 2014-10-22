@@ -18,5 +18,9 @@ namespace ClientHotel
         public string ABO_TEL { get; set; }
         public string ABO_AEROPORT { get; set; }
         
+        public Abonne()
+        {
+            this.Path = "Abonne";
+        }
     }
 }

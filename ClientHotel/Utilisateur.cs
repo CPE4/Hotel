@@ -11,6 +11,7 @@ namespace ClientHotel
     /// </summary>
     class Utilisateur
     {
+        public string Path { get; set; }
         public int ID { get; set; }
         public string MOTDEPASSE { get; set; }
         public string MEL { get; set; }

@@ -11,6 +11,9 @@ namespace ClientHotel
     /// </summary>
     class Hotelier : Utilisateur
     {
-        
+        public Hotelier()
+        {
+            this.Path = "Hotelier";
+        }
     }
 }
