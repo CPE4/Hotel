@@ -82,7 +82,6 @@
             this.HOT_NomLab.Size = new System.Drawing.Size(29, 13);
             this.HOT_NomLab.TabIndex = 1;
             this.HOT_NomLab.Text = "Nom";
-            this.HOT_NomLab.Click += new System.EventHandler(this.label1_Click);
             // 
             // HOT_DescriptionLab
             // 
@@ -110,7 +109,6 @@
             this.HOT_PrixLab.Size = new System.Drawing.Size(24, 13);
             this.HOT_PrixLab.TabIndex = 5;
             this.HOT_PrixLab.Text = "Prix";
-            this.HOT_PrixLab.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // HOT_AdrLigne1Lab
             // 
@@ -226,7 +224,6 @@
             this.HOT_LongitudeLab.Size = new System.Drawing.Size(54, 13);
             this.HOT_LongitudeLab.TabIndex = 22;
             this.HOT_LongitudeLab.Text = "Longitude";
-            this.HOT_LongitudeLab.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // HOT_Longitude
             // 
