@@ -33,8 +33,8 @@ namespace ClientHotel
             this._hotel.PAY_ID = 0;// TODO this.PAY_ID.Text;
             this._hotel.HOT_Latitude = (float)Convert.ToDouble(this.HOT_Latitude.Text);
             this._hotel.HOT_Longitude = (float)Convert.ToDouble(this.HOT_Longitude.Text);
-            this._hotel.IND_Indicatif = 0;// TODO this.IND_Indicatif.Text;
-            this._hotel.CAT_NbEtoiles = Convert.ToInt32(this.HOT_NbEtoiles.Text);
+            this._hotel.IND_Indicatif = Convert.ToInt32(this.IND_Indicatif.Text);
+            this._hotel.CAT_NbEtoiles = Convert.ToInt32(this.CAT_NbEtoiles.Text);
             this._hotel.HOT_Tel = this.HOT_Tel.Text;
             this._hotel.HOT_Mel = this.HOT_Mel.Text;
             this._hotel.HOT_SiteWeb = this.HOT_SiteWeb.Text;
