@@ -23,7 +23,7 @@ namespace ClientHotel
         private TypeMAJ typeMAJ;
         private string defaultURL;
 
-        public HotelForm(TypeMAJ tempType, Hotel h = null, string url = "")
+        public HotelForm(TypeMAJ tempType, string url = "", Hotel h = null)
         {
             InitializeComponent();
             if (h == null)
