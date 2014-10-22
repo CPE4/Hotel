@@ -53,8 +53,8 @@
             this.HOT_NbEtoilesLab = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.CAT_NbEtoiles = new System.Windows.Forms.ComboBox();
-            this.HOT_Prix = new System.Windows.Forms.ComboBox();
-            this.HOT_Pays = new System.Windows.Forms.ComboBox();
+            this.PRX_Prix = new System.Windows.Forms.ComboBox();
+            this.PAY_ID = new System.Windows.Forms.ComboBox();
             this.HOT_MelLab = new System.Windows.Forms.Label();
             this.HOT_Mel = new System.Windows.Forms.TextBox();
             this.Hot_SiteWebLab = new System.Windows.Forms.Label();
@@ -279,21 +279,21 @@
             this.CAT_NbEtoiles.Size = new System.Drawing.Size(139, 21);
             this.CAT_NbEtoiles.TabIndex = 5;
             // 
-            // HOT_Prix
+            // PRX_Prix
             // 
-            this.HOT_Prix.FormattingEnabled = true;
-            this.HOT_Prix.Location = new System.Drawing.Point(498, 11);
-            this.HOT_Prix.Name = "HOT_Prix";
-            this.HOT_Prix.Size = new System.Drawing.Size(139, 21);
-            this.HOT_Prix.TabIndex = 30;
+            this.PRX_Prix.FormattingEnabled = true;
+            this.PRX_Prix.Location = new System.Drawing.Point(498, 11);
+            this.PRX_Prix.Name = "PRX_Prix";
+            this.PRX_Prix.Size = new System.Drawing.Size(139, 21);
+            this.PRX_Prix.TabIndex = 30;
             // 
-            // HOT_Pays
+            // PAY_ID
             // 
-            this.HOT_Pays.FormattingEnabled = true;
-            this.HOT_Pays.Location = new System.Drawing.Point(432, 184);
-            this.HOT_Pays.Name = "HOT_Pays";
-            this.HOT_Pays.Size = new System.Drawing.Size(205, 21);
-            this.HOT_Pays.TabIndex = 32;
+            this.PAY_ID.FormattingEnabled = true;
+            this.PAY_ID.Location = new System.Drawing.Point(432, 184);
+            this.PAY_ID.Name = "PAY_ID";
+            this.PAY_ID.Size = new System.Drawing.Size(205, 21);
+            this.PAY_ID.TabIndex = 32;
             // 
             // HOT_MelLab
             // 
@@ -384,8 +384,8 @@
             this.Controls.Add(this.HOT_SiteWeb);
             this.Controls.Add(this.HOT_MelLab);
             this.Controls.Add(this.HOT_Mel);
-            this.Controls.Add(this.HOT_Pays);
-            this.Controls.Add(this.HOT_Prix);
+            this.Controls.Add(this.PAY_ID);
+            this.Controls.Add(this.PRX_Prix);
             this.Controls.Add(this.CAT_NbEtoiles);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.HOT_NbEtoilesLab);
@@ -445,8 +445,8 @@
         private System.Windows.Forms.Label HOT_NbEtoilesLab;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox CAT_NbEtoiles;
-        private System.Windows.Forms.ComboBox HOT_Prix;
-        private System.Windows.Forms.ComboBox HOT_Pays;
+        private System.Windows.Forms.ComboBox PRX_Prix;
+        private System.Windows.Forms.ComboBox PAY_ID;
         private System.Windows.Forms.Label HOT_MelLab;
         private System.Windows.Forms.TextBox HOT_Mel;
         private System.Windows.Forms.Label Hot_SiteWebLab;
