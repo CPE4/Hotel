@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,20 +89,19 @@ namespace ClientHotel
 
         private void HotelierMode()
         {
-                lblPseudo.Visible = false;
-                txtPseudo.Visible = false;
-                lblLongitude.Visible = false;
-                txtLongitude.Visible = false;
-                lblLatitude.Visible = false;
-                txtLatitude.Visible = false;
-                lblTel.Visible = false;
-                listInd.Visible = false;
-                txtTel.Visible = false;
-                lblPays.Visible = false;
-                listPays.Visible = false;
-                TypeUtilsateurP = TypeUtilisateur.Hotelier;
-                FabriqueUtilisateurP = new FabriqueUtilisateur();
-                UtilisateurP = FabriqueUtilisateurP.creation(TypeUtilisateur.Hotelier);
+            lblPseudo.Visible = false;
+            txtPseudo.Visible = false;
+            lblLongitude.Visible = false;
+            txtLongitude.Visible = false;
+            lblLatitude.Visible = false;
+            txtLatitude.Visible = false;
+            lblTel.Visible = false;
+            listInd.Visible = false;
+            txtTel.Visible = false;
+            TypeUtilsateurP = TypeUtilisateur.Hotelier;
+            actualiserListePays();
+            FabriqueUtilisateurP = new FabriqueUtilisateur();
+            UtilisateurP = FabriqueUtilisateurP.creation(TypeUtilisateur.Hotelier);
         }
 
         private void AbonneMode()
@@ -115,9 +115,8 @@ namespace ClientHotel
             lblTel.Visible = true;
             listInd.Visible = true;
             txtTel.Visible = true;
-            lblPays.Visible = true;
-            listPays.Visible = true;
             TypeUtilsateurP = TypeUtilisateur.Abonne;
+            actualiserListePays();
             FabriqueUtilisateurP = new FabriqueUtilisateur();
             UtilisateurP = FabriqueUtilisateurP.creation(TypeUtilisateur.Abonne);
         }
@@ -130,7 +129,7 @@ namespace ClientHotel
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             // Construction du JSON
-            UtilisateurP.MOTDEPASSE  = this.txtMdp.Text;
+            UtilisateurP.MOTDEPASSE = this.txtMdp.Text;
             UtilisateurP.MEL = this.txtMail.Text;
             UtilisateurP.NOM = this.txtNom.Text;
             UtilisateurP.PRENOM = this.txtPrenom.Text;
@@ -139,7 +138,7 @@ namespace ClientHotel
             UtilisateurP.CP = this.txtCP.Text;
             UtilisateurP.VILLE = this.txtVille.Text;
             UtilisateurP.ETAT = this.txtEtat.Text;
-            UtilisateurP.PAY_ID = this.listPays.SelectedIndex;
+            UtilisateurP.PAY_ID = this.cbxPays.SelectedIndex;
             if (TypeUtilsateurP == TypeUtilisateur.Abonne)
             {
                 ((Abonne)UtilisateurP).ABO_PSEUDO = this.txtPseudo.Text;
@@ -151,10 +150,10 @@ namespace ClientHotel
             }
 
             String json = JsonConvert.SerializeObject(UtilisateurP);
-            if(DEBUG)
-                Utils.sendDataToApi(txtUrl + UtilisateurP.Path, json, "-1");
+            if (DEBUG)
+                Utils.sendDataToApi(txtUrl + UtilisateurP.Path, json);
             else
-                Utils.sendDataToApi("http://localhost:1597/api/"+UtilisateurP.Path, json, "-1");
+                Utils.sendDataToApi("http://localhost:1597/api/" + UtilisateurP.Path, json);
         }
 
         /// <summary>
@@ -180,6 +179,38 @@ namespace ClientHotel
                 HotelierMode();
             else
                 AbonneMode();
-        } 
+        }
+
+        private void actualiserListePays()
+        {
+            /*string data = Utils.getDataFromApi("http://localhost:1597/api/Restaurant/", "json");
+            List<Pays> listPays = JsonConvert.DeserializeObject<Restaurant>(data);*/
+            /*  
+            DataTable dt = new DataTable();
+            DataColumn col1 = new DataColumn("Id", System.Type.GetType("System.Int16"));
+            dt.Columns.Add(col1);
+            DataColumn col2 = new DataColumn("Nom", System.Type.GetType("System.String"));
+            dt.Columns.Add(col2);
+            dt = JsonConvert.DeserializeObject<DataTable>(new DataTableConverter());
+            */
+            try
+            {
+                string data;
+                if (DEBUG)
+                    data = Utils.getDataFromApi(txtUrl.Text + "Pays", "JSON");
+                else
+                    data = Utils.getDataFromApi("http://localhost:1597/api/Pays", "Json");
+                List<Pays> listPays = JsonConvert.DeserializeObject<List<Pays>>(data);
+                foreach (Pays pays in listPays)
+                {
+                    cbxPays.Items.Add(new ComboboxItem(pays.Id, pays.Nom));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
     }
 }

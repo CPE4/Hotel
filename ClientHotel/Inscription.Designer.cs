@@ -56,7 +56,7 @@
             this.lblLongitude = new System.Windows.Forms.Label();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.lblPays = new System.Windows.Forms.Label();
-            this.listPays = new System.Windows.Forms.ComboBox();
+            this.cbxPays = new System.Windows.Forms.ComboBox();
             this.listInd = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -295,13 +295,13 @@
             this.lblPays.TabIndex = 29;
             this.lblPays.Text = "Pays";
             // 
-            // listPays
+            // cbxPays
             // 
-            this.listPays.FormattingEnabled = true;
-            this.listPays.Location = new System.Drawing.Point(281, 363);
-            this.listPays.Name = "listPays";
-            this.listPays.Size = new System.Drawing.Size(159, 24);
-            this.listPays.TabIndex = 30;
+            this.cbxPays.FormattingEnabled = true;
+            this.cbxPays.Location = new System.Drawing.Point(281, 363);
+            this.cbxPays.Name = "cbxPays";
+            this.cbxPays.Size = new System.Drawing.Size(159, 24);
+            this.cbxPays.TabIndex = 30;
             // 
             // listInd
             // 
@@ -384,7 +384,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.listInd);
-            this.Controls.Add(this.listPays);
+            this.Controls.Add(this.cbxPays);
             this.Controls.Add(this.lblPays);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.txtLongitude);
@@ -451,7 +451,7 @@
         private System.Windows.Forms.Label lblLongitude;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Label lblPays;
-        private System.Windows.Forms.ComboBox listPays;
+        private System.Windows.Forms.ComboBox cbxPays;
         private System.Windows.Forms.ComboBox listInd;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
