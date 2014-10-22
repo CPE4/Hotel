@@ -24,3 +24,4 @@ C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\obj\Deb
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Home.resources
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.csprojResolveAssemblyReference.cache
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Connexion.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\HotelClient\ClientHotel\bin\Debug\ClientHotel.exe.config

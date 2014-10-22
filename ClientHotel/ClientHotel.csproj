@@ -57,6 +57,7 @@
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
     <Compile Include="FabriqueUtilisateur.cs" />
+    <Compile Include="FourchettePrix.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,10 +14,22 @@ namespace ClientHotel
     public partial class HotelForm : Form
     {
         private Hotel _hotel;
-        public HotelForm()
+        public string defaultURL;
+
+        public HotelForm(string url)
         {
             InitializeComponent();
             this._hotel = new Hotel();
+            if (url == "")
+            {
+                defaultURL = "http://localhost:1597/api/";
+            }
+            else
+            {
+                defaultURL = url;
+            }
+            this.actualiserListePays();
+            this.actualiserListePrix();
         }
 
         private void BUT_Ok_Click(object sender, EventArgs e)
@@ -42,7 +54,41 @@ namespace ClientHotel
 
             String json = JsonConvert.SerializeObject(this._hotel);
 
-            Utils.sendDataToApi("http://localhost:1597/api/Hotel", json);
+            Utils.sendDataToApi(defaultURL+"Hotel", json);
+        }
+
+        private void actualiserListePrix()
+        {
+            try
+            {
+                string data = Utils.getDataFromApi(defaultURL+"FourchettePrix", "Json");
+                List<FourchettePrix> listPays = JsonConvert.DeserializeObject<List<FourchettePrix>>(data);
+                foreach (FourchettePrix fPrix in listPays)
+                {
+                    this.HOT_Prix.Items.Add(new ComboboxItem(fPrix.PRX_ID, fPrix.PRX_Fourchette));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void actualiserListePays()
+        {
+            try
+            {
+                string data = Utils.getDataFromApi(defaultURL + "Pays", "Json");
+                List<Pays> listPays = JsonConvert.DeserializeObject<List<Pays>>(data);
+                foreach (Pays pays in listPays)
+                {
+                    this.HOT_Pays.Items.Add(new ComboboxItem(pays.Id, pays.Nom));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
