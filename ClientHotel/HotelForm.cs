@@ -13,7 +13,7 @@ namespace ClientHotel
 {
     public partial class HotelForm : Form
     {
-        public Hotel _hotel;
+        private Hotel _hotel;
         public HotelForm()
         {
             InitializeComponent();

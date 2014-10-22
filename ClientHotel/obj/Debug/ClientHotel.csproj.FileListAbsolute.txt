@@ -2,13 +2,11 @@ c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\bin\De
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\bin\Debug\ClientHotel.exe
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\bin\Debug\ClientHotel.pdb
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Inscription.resources
-c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Hotels.resources
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Properties.Resources.resources
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.csproj.GenerateResource.Cache
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.exe
 c:\users\pc\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.pdb
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.HotelForm.resources
-C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.csprojResolveAssemblyReference.cache
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\bin\Debug\Newtonsoft.Json.dll
 C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\bin\Debug\ClientHotel.exe.config
@@ -23,3 +21,6 @@ C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\bin\Deb
 C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\obj\Debug\ClientHotel.exe
 C:\Users\User\Documents\Visual Studio 2013\HotelClient\Hotel\ClientHotel\obj\Debug\ClientHotel.pdb
+C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Home.resources
+C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.csprojResolveAssemblyReference.cache
+C:\Users\PC\documents\visual studio 2013\Projects\ClientHotel\ClientHotel\obj\Debug\ClientHotel.Connexion.resources

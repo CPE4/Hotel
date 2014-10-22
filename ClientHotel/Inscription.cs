@@ -19,15 +19,24 @@ namespace ClientHotel
     public partial class Inscription : Form
     {
         private bool DEBUG = true;
+        private string _serverPath;
         private string _userType;
         private FabriqueUtilisateur _fabriqueUtilisateur;
         private Utilisateur _utilisateur;
         private TypeUtilisateur _typeUtilsateur;
 
+        #region properties
+
         public TypeUtilisateur TypeUtilsateurP
         {
             get { return _typeUtilsateur; }
             set { _typeUtilsateur = value; }
+        }
+
+        public string ServerPath
+        {
+            get { return _serverPath; }
+            set { _serverPath = value; }
         }
 
         internal Utilisateur UtilisateurP
@@ -47,36 +56,30 @@ namespace ClientHotel
             get { return _userType; }
             set { _userType = value; }
         }
-        public Inscription()
+
+        #endregion
+
+        #region CTR
+        public Inscription(string serveurPath)
         {
+            ServerPath = serveurPath;
             InitializeComponent();
-            lblUrl.Visible = DEBUG;
-            txtUrl.Visible = DEBUG;
             lblTypeUtilisateur.Visible = DEBUG;
             cbxTypeUtilisateur.Visible = DEBUG;
-            if (DEBUG)
-            {
-                txtUrl.Text = "http://localhost:1597/api/";
-                cbxTypeUtilisateur.Items.Add("Hotelier");
-                cbxTypeUtilisateur.Items.Add("Abonne");
-            }
+            cbxTypeUtilisateur.Items.Add("Hotelier");
+            cbxTypeUtilisateur.Items.Add("Abonne");
         }
 
-        public Inscription(string typeUtilisateur)
+        public Inscription(string serveurPath, string typeUtilisateur)
         {
+            ServerPath = serveurPath;
             UserType = typeUtilisateur;
             InitializeComponent();
-            lblUrl.Visible = DEBUG;
-            txtUrl.Visible = DEBUG;
-            lblTypeUtilisateur.Visible = DEBUG;
-            cbxTypeUtilisateur.Visible = DEBUG;
-            if (DEBUG)
-            {
-                txtUrl.Text = "http://localhost:1597/api/";
-                cbxTypeUtilisateur.Items.Add("Hotelier");
-                cbxTypeUtilisateur.Items.Add("Abonne");
-            }
+            cbxTypeUtilisateur.Items.Add("Hotelier");
+            cbxTypeUtilisateur.Items.Add("Abonne");
         }
+
+        #endregion
 
         private void Inscription_Load(object sender, EventArgs e)
         {
@@ -150,10 +153,7 @@ namespace ClientHotel
             }
 
             String json = JsonConvert.SerializeObject(UtilisateurP);
-            if (DEBUG)
-                Utils.sendDataToApi(txtUrl + UtilisateurP.Path, json);
-            else
-                Utils.sendDataToApi("http://localhost:1597/api/" + UtilisateurP.Path, json);
+            Utils.sendDataToApi(ServerPath + UtilisateurP.Path, json);
         }
 
         /// <summary>
@@ -196,10 +196,7 @@ namespace ClientHotel
             try
             {
                 string data;
-                if (DEBUG)
-                    data = Utils.getDataFromApi(txtUrl.Text + "Pays", "JSON");
-                else
-                    data = Utils.getDataFromApi("http://localhost:1597/api/Pays", "Json");
+                data = Utils.getDataFromApi(ServerPath + "Pays", "JSON");
                 List<Pays> listPays = JsonConvert.DeserializeObject<List<Pays>>(data);
                 foreach (Pays pays in listPays)
                 {
