@@ -61,12 +61,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.lblTypeUtilisateur = new System.Windows.Forms.Label();
+            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.lblUrl = new System.Windows.Forms.Label();
+            this.cbxTypeUtilisateur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 24);
+            this.label1.Location = new System.Drawing.Point(22, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 0;
@@ -74,14 +78,14 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(85, 24);
+            this.txtPrenom.Location = new System.Drawing.Point(85, 40);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(142, 22);
             this.txtPrenom.TabIndex = 1;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(295, 24);
+            this.txtNom.Location = new System.Drawing.Point(295, 40);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(145, 22);
             this.txtNom.TabIndex = 3;
@@ -89,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(252, 24);
+            this.label2.Location = new System.Drawing.Point(252, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 2;
@@ -194,7 +198,7 @@
             // 
             // txtPseudo
             // 
-            this.txtPseudo.Location = new System.Drawing.Point(85, 59);
+            this.txtPseudo.Location = new System.Drawing.Point(85, 75);
             this.txtPseudo.Name = "txtPseudo";
             this.txtPseudo.Size = new System.Drawing.Size(142, 22);
             this.txtPseudo.TabIndex = 17;
@@ -202,7 +206,7 @@
             // lblPseudo
             // 
             this.lblPseudo.AutoSize = true;
-            this.lblPseudo.Location = new System.Drawing.Point(22, 59);
+            this.lblPseudo.Location = new System.Drawing.Point(22, 75);
             this.lblPseudo.Name = "lblPseudo";
             this.lblPseudo.Size = new System.Drawing.Size(56, 17);
             this.lblPseudo.TabIndex = 16;
@@ -210,7 +214,7 @@
             // 
             // txtMdp
             // 
-            this.txtMdp.Location = new System.Drawing.Point(255, 98);
+            this.txtMdp.Location = new System.Drawing.Point(255, 114);
             this.txtMdp.Name = "txtMdp";
             this.txtMdp.Size = new System.Drawing.Size(185, 22);
             this.txtMdp.TabIndex = 21;
@@ -218,7 +222,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 101);
+            this.label11.Location = new System.Drawing.Point(23, 117);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 17);
             this.label11.TabIndex = 20;
@@ -333,11 +337,49 @@
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
+            // lblTypeUtilisateur
+            // 
+            this.lblTypeUtilisateur.AutoSize = true;
+            this.lblTypeUtilisateur.Location = new System.Drawing.Point(235, 12);
+            this.lblTypeUtilisateur.Name = "lblTypeUtilisateur";
+            this.lblTypeUtilisateur.Size = new System.Drawing.Size(98, 17);
+            this.lblTypeUtilisateur.TabIndex = 37;
+            this.lblTypeUtilisateur.Text = "typeUtilisateur";
+            // 
+            // txtUrl
+            // 
+            this.txtUrl.Location = new System.Drawing.Point(85, 12);
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.Size = new System.Drawing.Size(142, 22);
+            this.txtUrl.TabIndex = 36;
+            // 
+            // lblUrl
+            // 
+            this.lblUrl.AutoSize = true;
+            this.lblUrl.Location = new System.Drawing.Point(22, 12);
+            this.lblUrl.Name = "lblUrl";
+            this.lblUrl.Size = new System.Drawing.Size(60, 17);
+            this.lblUrl.TabIndex = 35;
+            this.lblUrl.Text = "url(Port)";
+            // 
+            // cbxTypeUtilisateur
+            // 
+            this.cbxTypeUtilisateur.FormattingEnabled = true;
+            this.cbxTypeUtilisateur.Location = new System.Drawing.Point(339, 10);
+            this.cbxTypeUtilisateur.Name = "cbxTypeUtilisateur";
+            this.cbxTypeUtilisateur.Size = new System.Drawing.Size(121, 24);
+            this.cbxTypeUtilisateur.TabIndex = 38;
+            this.cbxTypeUtilisateur.SelectedIndexChanged += new System.EventHandler(this.cbxTypeUtilisateur_SelectedIndexChanged);
+            // 
             // Inscription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 541);
+            this.Controls.Add(this.cbxTypeUtilisateur);
+            this.Controls.Add(this.lblTypeUtilisateur);
+            this.Controls.Add(this.txtUrl);
+            this.Controls.Add(this.lblUrl);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
@@ -414,5 +456,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Label lblTypeUtilisateur;
+        private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.Label lblUrl;
+        private System.Windows.Forms.ComboBox cbxTypeUtilisateur;
     }
 }
