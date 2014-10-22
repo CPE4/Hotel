@@ -17,6 +17,7 @@ namespace ClientHotel
 
     public partial class Inscription : Form
     {
+        private bool DEBUG = true;
         private string _userType;
         private FabriqueUtilisateur _fabriqueUtilisateur;
         private Utilisateur _utilisateur;
@@ -48,12 +49,32 @@ namespace ClientHotel
         public Inscription()
         {
             InitializeComponent();
+            lblUrl.Visible = DEBUG;
+            txtUrl.Visible = DEBUG;
+            lblTypeUtilisateur.Visible = DEBUG;
+            cbxTypeUtilisateur.Visible = DEBUG;
+            if (DEBUG)
+            {
+                txtUrl.Text = "http://localhost:1597/api/";
+                cbxTypeUtilisateur.Items.Add("Hotelier");
+                cbxTypeUtilisateur.Items.Add("Abonne");
+            }
         }
 
         public Inscription(string typeUtilisateur)
         {
             UserType = typeUtilisateur;
             InitializeComponent();
+            lblUrl.Visible = DEBUG;
+            txtUrl.Visible = DEBUG;
+            lblTypeUtilisateur.Visible = DEBUG;
+            cbxTypeUtilisateur.Visible = DEBUG;
+            if (DEBUG)
+            {
+                txtUrl.Text = "http://localhost:1597/api/";
+                cbxTypeUtilisateur.Items.Add("Hotelier");
+                cbxTypeUtilisateur.Items.Add("Abonne");
+            }
         }
 
         private void Inscription_Load(object sender, EventArgs e)
@@ -130,8 +151,10 @@ namespace ClientHotel
             }
 
             String json = JsonConvert.SerializeObject(UtilisateurP);
-
-            Utils.sendDataToApi("http://localhost:1597/api/"+UtilisateurP.Path, json, "-1");
+            if(DEBUG)
+                Utils.sendDataToApi(txtUrl + UtilisateurP.Path, json, "-1");
+            else
+                Utils.sendDataToApi("http://localhost:1597/api/"+UtilisateurP.Path, json, "-1");
         }
 
         /// <summary>
@@ -149,6 +172,14 @@ namespace ClientHotel
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbxTypeUtilisateur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxTypeUtilisateur.Text == "Hotelier")
+                HotelierMode();
+            else
+                AbonneMode();
         } 
     }
 }
